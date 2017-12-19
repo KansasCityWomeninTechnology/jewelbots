@@ -1,0 +1,39 @@
+// first we declare our variables
+LED led;
+Timer timer;
+Buzzer buzz;
+Animation animation;
+bool first_time_red = true; // this one is a boolean type meaning it can only be true or false
+bool first_time_blue = true;
+ColorLabel colors[5] = {BLUE, YELLOW, MAGENTA, GREEN, RED};
+LED_Pos pos[4] = {NW, NE, SE, SW};
+
+void setup() {
+  // put code here, that you want to run once each time the jewelbot powers up
+}
+
+void loop() {
+  // put code here, to run continuously while the jewelbot is on
+  
+  // this is a conditional, it only runs IF the condition is met
+  if ((see_red_friends()) && (first_time_red)) {
+     for(int x = 0; x < 5; x=x+2){
+    led.flash_all(colors[x], 1000);
+    timer.pause(1000);
+  }
+  
+  // reset so that the jewelbot is ready to repeat the
+  // conditional next time
+  first_time_red = false;
+  } else if ((!see_red_friends()) && (!first_time_red)) {
+    first_time_red = true;
+  }
+}
+
+void button_press(void){
+  // put code here, to run when the jewelbot button is pressed for 1 second or less
+}
+
+void button_press_long(void) {
+  // put code here, to run when the jewelbot button is pressed for 2 full seconds
+}

@@ -1,0 +1,18 @@
+// you can use this as a template for your own program
+// or you can upload this to your jewelbot to reset any previously defined functions
+
+void setup() {
+  // put your setup code here, to run once:
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+}
+
+void button_press_long(void) {
+  // put code here, to run when button is pressed for 3 seconds
+}
+
+void button_press(void){
+  // put code here, to run when button is pressed for 1 second or less
+}

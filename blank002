@@ -1,0 +1,11 @@
+void setup() {
+}
+
+void loop() {
+}
+
+void button_press_long(void) {
+}
+
+void button_press(void){
+}

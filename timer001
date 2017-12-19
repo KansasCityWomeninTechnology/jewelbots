@@ -1,0 +1,50 @@
+
+// declare our variables
+Buzzer buzz;
+LED led;
+Timer timer;
+int x = 0; // our counter is a global variable starting at zero.
+
+
+void setup() {
+}
+
+void loop() {
+}
+
+
+// the function that gets called when you press the button a short button press
+void button_press(void){
+
+  // increase the value of x by one for each short button press
+  x = x+1;
+}
+
+// the function that gets called when you press the button for a long button press
+void button_press_long(void) {
+  int i = 0;
+  int j = 0; // i and j are local variables with scope only inside this function.
+
+  // the loop that flashes how many minutes your timer will count down
+  for(int i = 1; i <= x; i++){
+    led.flash_all(BLUE,1000);
+    timer.pause(500);
+  }
+
+  // a minute is 60,000 miliseconds
+  // but the pause method can't handle numbers that big
+  // so we're going to do increments of 10000 times 6
+  // and we'll have the leds flash red every 60 seconds
+  for(int j = 1; j <= x*6; j++){
+    timer.pause(10000);
+    if (j % 6 == 0) {
+      led.flash_all(RED, 1000);
+    }
+  }
+
+  // reset x back to 0 so it's ready for next time
+  x = 0;
+
+  // vibrate when the time is up
+  buzz.short_buzz();
+}

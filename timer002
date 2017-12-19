@@ -1,0 +1,33 @@
+Buzzer buzz;
+LED led;
+Timer timer;
+int x = 0;
+
+void setup() {
+}
+
+void loop() {
+}
+
+void button_press(void){
+  x = x+1;
+}
+
+void button_press_long(void) {
+  int i = 0;
+  int j = 0; // i and j are local variables with scope only inside this function.
+  for(int i = 1; i <= x; i++){
+    led.flash_all(BLUE,1000);
+    timer.pause(500);
+  }
+
+  for(int j = 1; j <= x*6; j++){
+    timer.pause(10000);
+    if (j % 6 == 0) {
+      led.flash_all(RED, 1000);
+    }
+  }
+  
+  x = 0;
+  buzz.short_buzz();
+}
