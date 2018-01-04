@@ -9,18 +9,18 @@ Hello! I'm so happy to share with you all the fun I have making up programs for 
 ---
 While we wait for everyone to arrive, we have some fun activities for you to work on. Don't worry, we'll do the project part as a group!
 
-    1. Parents: Please take our anonymous [survey](https://docs.google.com/forms/d/e/1FAIpQLSdKlS1CXl3lq1FuCNgFuoBucqZhq4f7Yr2V67PMp0IiuhfuBg/viewform).
-    2. Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
-    3. Install the Arduino IDE (stands for Integrated Development Environment.)[Arduino Software](https://www.arduino.cc/en/Main/Software).
-    4. Visit the Instructions section of the Jewelbots website and click on "Code Setup" then click on "Add Boards" and start working your way through the instructions [Jewelbots](https://jewelbots.com/pages/support).
+1. Parents: Please take our anonymous [survey](https://docs.google.com/forms/d/e/1FAIpQLSdKlS1CXl3lq1FuCNgFuoBucqZhq4f7Yr2V67PMp0IiuhfuBg/viewform).
+2. Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
+3. Install the Arduino IDE (stands for Integrated Development Environment.)[Arduino Software](https://www.arduino.cc/en/Main/Software).
+4. Visit the Instructions section of the Jewelbots website and click on "Code Setup" then click on "Add Boards" and start working your way through the instructions [Jewelbots](https://jewelbots.com/pages/support).
 
 ## Project Setup
 ---
 There are two types of programs for Jewelbots. Solo Coding uses the one input (the magic button) and two outputs (the led lights and the buzzer). Friendship Coding uses two inputs (the magic button and Bluetooth) and three outputs (the led lights, the buzzer, and Bluetooth). Our first project will be to write a program that utilizes Solo Coding.
 
-    5. The first program we are going to write is a Timer that you set by pressing the magic button on the Jewelbot. After we code, compile and upload our Timer program to the Jewelbot, you can press the magic button X number of times to set the timer for X number of minutes. Start by selecting File > New in your Arduino IDE. This will open a new window, feel free to make the window larger so it's easier to use.
-    6. Next choose File > Save As in your Arduino IDE and choose a name and location for your program file.
-    7.
+5. The first program we are going to write is a Timer that you set by pressing the magic button on the Jewelbot. After we code, compile and upload our Timer program to the Jewelbot, you can press the magic button X number of times to set the timer for X number of minutes. Start by selecting File > New in your Arduino IDE. This will open a new window, feel free to make the window larger so it's easier to use.
+6. Next choose File > Save As in your Arduino IDE and choose a name and location for your program file.
+7.
 
 ### How to code
 
