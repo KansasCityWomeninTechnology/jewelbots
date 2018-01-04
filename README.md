@@ -20,7 +20,7 @@ There are two types of programs for Jewelbots. Solo Coding uses the one input (t
 
     5. The first program we are going to write is a Timer that you set by pressing the magic button on the Jewelbot. After we code, compile and upload our Timer program to the Jewelbot, you can press the magic button X number of times to set the timer for X number of minutes. Start by selecting File > New in your Arduino IDE. This will open a new window, feel free to make the window larger so it's easier to use.
     6. Next choose File > Save As in your Arduino IDE and choose a name and location for your program file.
-    7. 
+    7.
 
 ### How to code
 
@@ -43,9 +43,9 @@ Jewelbots can actually be used right out of the box without ever programming the
 ---
 Did you love working with code? If you want to learn more on your own, we have suggestions for you.
 
-    * Come to one of our other Coding & Cupcakes events [Eventbrite](https://www.eventbrite.com/o/coding-amp-cupcakes-kansas-city-16053804463).
-    * Come to a Coder Dojo event [Coder Dojo](http://coderdojokc.com/).
-    * Create an account on [Codecademy] (http://www.codecademy.com/) and try out another microcontroller programming language like Python or Javascript [Programming](https://www.codecademy.com/catalog/subject/programming).
-    * Visit the Jewelbots community forums (they are well moderated to be safe for kids) and watch their videos on advanced programming for your Jewelbot [Jewelbots Community Forums](http://alpha.jewelbots.com/).
-    * Visit Tinkercad Learn and click on "Circuits" [Tinkercad Learn](https://www.tinkercad.com/learn/).
-    * Check out the Arduino project hub for ideas about what you can make with your new skills! [Arduino Project Hub](https://create.arduino.cc/projecthub).
+* Come to one of our other Coding & Cupcakes events [Eventbrite](https://www.eventbrite.com/o/coding-amp-cupcakes-kansas-city-16053804463).
+* Come to a Coder Dojo event [Coder Dojo](http://coderdojokc.com/).
+* Create an account on [Codecademy] (http://www.codecademy.com/) and try out another microcontroller programming language like Python or Javascript [Programming](https://www.codecademy.com/catalog/subject/programming).
+* Visit the Jewelbots community forums (they are well moderated to be safe for kids) and watch their videos on advanced programming for your Jewelbot [Jewelbots Community Forums](http://alpha.jewelbots.com/).
+* Visit Tinkercad Learn and click on "Circuits" [Tinkercad Learn](https://www.tinkercad.com/learn/).
+* Check out the Arduino project hub for ideas about what you can make with your new skills! [Arduino Project Hub](https://create.arduino.cc/projecthub).
