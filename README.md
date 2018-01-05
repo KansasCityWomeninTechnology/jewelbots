@@ -16,11 +16,24 @@ While we wait for everyone to arrive, we have some fun activities for you to wor
 
 ## Project Setup
 ---
-There are two types of programs for Jewelbots. Solo Coding uses the one input (the magic button) and two outputs (the led lights and the buzzer). Friendship Coding uses two inputs (the magic button and Bluetooth) and three outputs (the led lights, the buzzer, and Bluetooth). Our first project will be to write a program that utilizes Solo Coding.
+There are two types of programs for Jewelbots. Solo Coding uses the one input (the magic button) and two outputs (the led lights and the buzzer). Friendship Coding uses two inputs (the magic button and Bluetooth) and three outputs (the led lights, the buzzer, and Bluetooth). We will write one solo coding program and one friendship coding program today.
 
-5. The first program we are going to write is a Timer that you set by pressing the magic button on the Jewelbot. After we code, compile and upload our Timer program to the Jewelbot, you can press the magic button X number of times to set the timer for X number of minutes. Start by selecting File > New in your Arduino IDE. This will open a new window, feel free to make the window larger so it's easier to use.
+5. Start by selecting File > New in your Arduino IDE. This will open a new window, feel free to make the window larger so it's easier to use.
 6. Next choose File > Save As in your Arduino IDE and choose a name and location for your program file.
-7.
+7. Every time you create a new file in he Arduino IDE it will have a "setup" and "loop" function already in it. This is because most microcontrollers (especially Arduino brand) use programs with "setup" and "loop" functions. The "setup" function runs each time the the device is powered on, then the "loop" function runs continuously while the device is on. Jewelbots are slightly different. They come wtih libraries that allow us to write functions specifically for the Jewelbots inputs (magic button and Bluetooth) and outputs (leds, buzzer, and Bluetooth). So for this class we won't be using "setup" and "loop". You can delete them or leave them blank.
+
+## Instructions to solo code your Jewelbot
+---
+The first program we are going to write is a Timer that you set by pressing the magic button on the Jewelbot. After we code, compile and upload our Timer program to the Jewelbot, you will be able to press the magic button X number of times to set the timer for X number of minutes.
+
+8. First we declare our variables. Type the following code at the top of the project file.
+```
+Buzzer buzz;
+LED led;
+Timer timer;
+int x = 0; // our counter is a global variable starting at zero.
+```
+9. Next we
 
 ### How to code
 
