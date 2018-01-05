@@ -31,9 +31,15 @@ The first program we are going to write is a Timer that you set by pressing the 
 Buzzer buzz;
 LED led;
 Timer timer;
-int x = 0; // our counter is a global variable starting at zero.
+int x = 0;
 ```
-9. Next we
+Buzzer and LED are variables that represent the outputs on your Jewelbot. Timer is a variable that we will use to count the passing microseconds. The final variable is called "x". We define x as an integer by giving it the prefix "int". We set x to have the value of 0. In programming, the symbol = does not mean equal, it means "has the value of".
+9. Next we write our first function! It will have the name button_press. It will have the return type of void which we indicate by giving it the prefix void. This function will also take no arguments which we will indicate by putting the word void inside parenthesis before the opening braces of the function body.
+```
+void button_press(void){
+
+}
+```
 
 ### How to code
 
