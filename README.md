@@ -34,12 +34,16 @@ Timer timer;
 int x = 0;
 ```
 Buzzer and LED are variables that represent the outputs on your Jewelbot. Timer is a variable that we will use to count the passing microseconds. The final variable is called "x". We define x as an integer by giving it the prefix "int". We set x to have the value of 0. In programming, the symbol = does not mean equal, it means "has the value of".
+
 9. Next we write our first function! It will have the name button_press. It will have the return type of void which we indicate by giving it the prefix void. This function will also take no arguments which we will indicate by putting the word void inside parenthesis before the opening braces of the function body.
 ```
 void button_press(void){
 
 }
 ```
+10. Inside the braces of the function body, add this line of code. `x = x+1;` Remembering that the = sign means "has the value of" in programming, read the line of code outloud. Can you guess what it is doing? Based on the name of this function, can you describe what is going to happen every time the button is pressed?
+
+
 
 ### How to code
 
