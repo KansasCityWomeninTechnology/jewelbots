@@ -41,8 +41,30 @@ void button_press(void){
 
 }
 ```
-10. Inside the braces of the function body, add this line of code. `x = x+1;` Remembering that the = sign means "has the value of" in programming, read the line of code outloud. Can you guess what it is doing? Based on the name of this function, can you describe what is going to happen every time the button is pressed?
+10. Inside the braces of the function body, add this line of code. `x = x+1;` Remembering that the = sign means "has the value of" in programming, read the line of code out loud. Can you guess what it is doing? Based on the name of this function, can you describe what is going to happen every time the button is pressed? Your code should now look like this.
+```
+Buzzer buzz;
+LED led;
+Timer timer;
+int x = 0;
 
+void button_press(void){
+
+  // increase the value of x by one for each short button press
+  x = x+1;
+}
+```
+
+11. Next we will write another function. This one has the name button_press_long. It also takes (void) arguments and has a return type of void. See if you can guess how to type that. Don't be shy about trying something. We will provide the correct code in the next step.
+
+12. Inside the braces of the function body we need to add some code that tells the Jewelbot what to do when the button is pressed for a long press. The short button presses set the timer, and the long button press starts the timer. Several steps need to happen inside the button_press_long function. The first thing the button_press_long function does is declare some variables that will be used to count.
+```
+void button_press_long(void) {
+  int i = 0;
+  int j = 0; // i and j are local variables with scope only inside this function.
+}
+```
+13. The next thing the button_press_long function does is
 
 
 ### How to code
