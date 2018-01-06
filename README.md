@@ -102,6 +102,43 @@ void button_press_long(void) {
   }
 }
 ```
+Now our button_press_long function has a "for loop" that will flash all the leds blue x number of times, with a half second pause between flashes.
+
+14. The last thing we need to code our button_press_long function to do is to reset x to 0 and buzz to let us know the time is up. The code for that is
+```x = 0;
+buzz.short_buzz();
+```
+
+15. Now your code is ready to test out. It should look like this...
+```
+Buzzer buzz;
+LED led;
+Timer timer;
+int x = 0;
+
+void setup() {
+}
+
+void loop() {
+}
+
+void button_press(void){
+  x = x+1;
+}
+
+void button_press_long(void) {
+  int i = 0;
+  int j = 0; // i and j are local variables with scope only inside this function.
+  for(int i = 1; i <= x; i++){
+    led.flash_all(BLUE,1000);
+    timer.pause(500);
+  }
+
+  x = 0;
+  buzz.short_buzz();
+}
+```
+16. 
 
 ### How to code
 
