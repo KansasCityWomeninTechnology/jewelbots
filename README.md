@@ -33,7 +33,7 @@ LED led;
 Timer timer;
 int x = 0;
 ```
-Buzzer and LED are variables that represent the outputs on your Jewelbot. Timer is a variable that we will use to count the passing microseconds. The final variable is called "x". We define x as an integer by giving it the prefix "int". We set x to have the value of 0. In programming, the symbol = does not mean equal, it means "has the value of".
+Buzzer and LED are variables that represent the outputs on your Jewelbot. Timer is a variable that we will use to count the passing microseconds. The final variable is called "x". We define x as an integer by giving it the prefix "int". We set x to have the value of 0 by typing `x = 0`. In programming, the symbol = does not mean equals, it means "has the value of".
 
 9. Next we write our first function! It will have the name button_press. It will have the return type of void which we indicate by giving it the prefix void. This function will also take no arguments which we will indicate by putting the word void inside parenthesis before the opening braces of the function body.
 ```
@@ -49,23 +49,59 @@ Timer timer;
 int x = 0;
 
 void button_press(void){
-
-  // increase the value of x by one for each short button press
   x = x+1;
 }
 ```
 
 11. Next we will write another function. This one has the name button_press_long. It also takes (void) arguments and has a return type of void. See if you can guess how to type that. Don't be shy about trying something. We will provide the correct code in the next step.
 
-12. Inside the braces of the function body we need to add some code that tells the Jewelbot what to do when the button is pressed for a long press. The short button presses set the timer, and the long button press starts the timer. Several steps need to happen inside the button_press_long function. The first thing the button_press_long function does is declare some variables that will be used to count.
+12. Inside the braces of the function body we need to add some code that tells the Jewelbot what to do when the button is pressed for a long press. The short button presses set the timer, and the long button press starts the timer. Several steps need to happen inside the button_press_long function. The first thing we add to our button_press_long are some variables to use as counters.
 ```
 void button_press_long(void) {
   int i = 0;
-  int j = 0; // i and j are local variables with scope only inside this function.
+  int j = 0;
+```
+13. The next thing we are adding to our button_press_long function is a loop telling the leds to flash x number of times. Add the following to your button_press_long function.
+```
+for(int i = 1; i <= x; i++){
+    led.flash_all(BLUE,1000);
+    timer.pause(500);
 }
 ```
-13. The next thing the button_press_long function does is
+This is a "for loop". A "for loop" is a conditional that repeats some code according to the conditions you give it. It is super useful for writing code that you want to repeat many times. The syntax of a "for loop" is that it starts with the word "for". Next the conditions are insude parenthesis. The conditions always go in this order (start, stop, step). In our code, the conditions are `(int i = 1; i <= x; i++)`. This statement tells the Jewelbot to repeat the code inside the "for loop" on the following conditions: _start_ with an integer type of variable called i that has the value of 1, _stop_ when i no longer has a value of equal to or less than x, _step_ each time through the loop by adding 1 to i for every repeat. Don't understand it all yet? Not to worry, this is the sort of thing that's easiest to learn by doing. So let's move on! Your code should now look like this.
+```
+Buzzer buzz;
+LED led;
+Timer timer;
+int x = 0;
 
+void setup() {
+}
+
+void loop() {
+}
+
+void button_press(void){
+  x = x+1;
+}
+
+void button_press_long(void) {
+  int i = 0;
+  int j = 0;
+
+  for(int i = 1; i <= x; i++){
+    led.flash_all(BLUE,1000);
+    timer.pause(500);
+  }
+
+  for(int j = 1; j <= x*6; j++){
+    timer.pause(10000);
+    if (j % 6 == 0) {
+      led.flash_all(RED, 1000);
+    }
+  }
+}
+```
 
 ### How to code
 
