@@ -1,3 +1,4 @@
+Animation animation;
 Buzzer buzz;
 LED led;
 Timer timer;
@@ -15,7 +16,7 @@ void button_press(void){
 
 void button_press_long(void) {
   int i = 0;
-  int j = 0; // i and j are local variables with scope only inside this function.
+  int j = 0;
   for(int i = 1; i <= x; i++){
     led.flash_all(BLUE,1000);
     timer.pause(500);
@@ -27,7 +28,8 @@ void button_press_long(void) {
       led.flash_all(RED, 1000);
     }
   }
-  
+
   x = 0;
   buzz.short_buzz();
+  animation.rainbows();
 }

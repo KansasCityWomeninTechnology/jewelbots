@@ -1,9 +1,10 @@
 
-// declare our variables
+// declare variables
+Animation animation;
 Buzzer buzz;
 LED led;
 Timer timer;
-int x = 0; // our counter is a global variable starting at zero.
+int x = 0; // Declare x outside the functions
 
 
 void setup() {
@@ -13,17 +14,17 @@ void loop() {
 }
 
 
-// the function that gets called when you press the button a short button press
+// Press magic button for < 2 seconds to call this function
 void button_press(void){
 
-  // increase the value of x by one for each short button press
+  // x increases by one for each short button press
   x = x+1;
 }
 
-// the function that gets called when you press the button for a long button press
+// Press magic button 2 full seconds to call this function
 void button_press_long(void) {
   int i = 0;
-  int j = 0; // i and j are local variables with scope only inside this function.
+  int j = 0; // Variables declared inside a function are local
 
   // the loop that flashes how many minutes your timer will count down
   for(int i = 1; i <= x; i++){
@@ -47,4 +48,7 @@ void button_press_long(void) {
 
   // vibrate when the time is up
   buzz.short_buzz();
+
+  // celebrate with an Animation
+  animation.rainbows();
 }

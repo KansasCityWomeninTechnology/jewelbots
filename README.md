@@ -7,7 +7,7 @@ While we wait for everyone to arrive, we have some fun activities for you to wor
 
 1. Parents: Please take our anonymous [survey](https://docs.google.com/forms/d/e/1FAIpQLSdKlS1CXl3lq1FuCNgFuoBucqZhq4f7Yr2V67PMp0IiuhfuBg/viewform).
 2. Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
-3. You'll need to download the Arduino IDE \(it's free\) onto a Windows, Apple, or Linux computer \(Chromebooks don't work with Jewelbots yet at this time. Hopefully someday we can figure out a way to do this on chromebooks!\) [Install the Arduino IDE (stands for Integrated Development Environment.)](https://www.arduino.cc/en/Main/Software).
+3. You'll need to download the Arduino IDE \(it's free\) onto a Windows, Apple, or Linux computer \(Chromebooks don't work with Jewelbots at this time.\) [Install the Arduino IDE (stands for Integrated Development Environment.)](https://www.arduino.cc/en/Main/Software).
 4. After you've got the Arduino IDE started up, you'll need to add the Jewelbots boards by copying and pasting the following block of code into the Arduino's "Additional Boards Manager URLS" text box located in the Preferences. Get to Preferences by looking under the File menu in the IDE.
 
 `https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json,https://jewelbots.github.io/arduino-friendship/package_jewelbots_friendship_index.json`
@@ -167,11 +167,13 @@ void button_press_long(void) {
 
 19. Unplug your Jewelbot and test out your new Timer! Click the magic button one time to set the timer for 1 minute. Press the magic button for two full seconds to start the timer. You will see all four leds flash blue (or whatever color you changed it to) one time for every minute set on the timer. The leds will flash red (or whatever color you changed it to) once every 60 seconds. When the timer ends, you will feel a buzz and see an led animation.
 
-20. Congratulations! You just programmed an embedded system, that's something to be proud of.
+20. Congratulations! You programmed an embedded system, that's something to be proud of.
 
+## Bonus Mission
+To code a friendship program for your Jewelbot, create a new file in the Arduino IDE and set the Board (found under Tools) to Friendship Coding Mode. Then go to this repo and copy the code from one of the friendship program files [Coding & Cupcakes: Jewelbots](https://github.com/KansasCityWomeninTechnology/jewelbots).
 
 ### How to pair
-Make sure both Jewelbots are unplugged, turned on, and within 60 centimeters of each other. Next, hold down the button on both Jewelbots for 2 full seconds \(counting 1 Mississippi, 2 Mississippi.\) One Jewelbot will light up all white, the other will cycle through colors one at a time. You pick the friendship group color by pressing the button on the cycling Jewelbot.
+Make sure both Jewelbots are unplugged, turned on, and within 60 centimeters of each other. Hold down the button on both Jewelbots for 2 full seconds \(counting 1 Mississippi, 2 Mississippi.\) One Jewelbot will light up all white, the other will cycle through colors one at a time. You pick the friendship group color by pressing the button on the cycling Jewelbot.
 
 ## Homework
 Did you love working with code? If you want to learn more on your own, we have suggestions for you.
