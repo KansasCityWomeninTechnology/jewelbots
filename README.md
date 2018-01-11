@@ -1,9 +1,7 @@
-# Jewelbots Curriculum
----
-
+# Coding & Cupcakes Worksheet
 ## Overview
----
-Hello! I'm so happy to share with you all the fun I have making up programs for my Jewelbot \(programmable friendship bracelet\).
+___
+Hello and welcome to Coding & Cupcakes: Jewelbots! Today you will code a Jewelbots programmable friendship bracelet to blink and buzz according to your instructions. You will use the C language to program a bluetooth enabled microcontroller.
 
 ## Prep Work
 ---
@@ -16,7 +14,7 @@ While we wait for everyone to arrive, we have some fun activities for you to wor
 
 `https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json,https://jewelbots.github.io/arduino-friendship/package_jewelbots_friendship_index.json`
 
-Detailed instructions on how to do this can be found on the [Jewelbots website](https://jewelbots.com/pages/support) if you lick on "Code Setup" then click on "Add Boards".
+Detailed instructions on how to do this can be found on the [Jewelbots website](https://jewelbots.com/pages/support) if you click on "Code Setup" then click on "Add Boards".
 
 ## Project Setup
 ---
