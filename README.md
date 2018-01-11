@@ -1,10 +1,8 @@
 # Coding & Cupcakes Worksheet
 ## Overview
-___
 Hello and welcome to Coding & Cupcakes: Jewelbots! Today you will code a Jewelbots programmable friendship bracelet to blink and buzz according to your instructions. You will use the C language to program a bluetooth enabled microcontroller.
 
 ## Prep Work
----
 While we wait for everyone to arrive, we have some fun activities for you to work on. Don't worry, we'll do the project part as a group!
 
 1. Parents: Please take our anonymous [survey](https://docs.google.com/forms/d/e/1FAIpQLSdKlS1CXl3lq1FuCNgFuoBucqZhq4f7Yr2V67PMp0IiuhfuBg/viewform).
@@ -17,7 +15,6 @@ While we wait for everyone to arrive, we have some fun activities for you to wor
 Detailed instructions on how to do this can be found on the [Jewelbots website](https://jewelbots.com/pages/support) if you click on "Code Setup" then click on "Add Boards".
 
 ## Project Setup
----
 There are two types of programs for Jewelbots. Solo Coding uses the one input (the magic button) and two outputs (the led lights and the buzzer). Friendship Coding uses two inputs (the magic button and Bluetooth) and three outputs (the led lights, the buzzer, and Bluetooth). We will write one solo coding program and one friendship coding program today.
 
 5. Start by selecting File > New in your Arduino IDE. This will open a new window, feel free to make the window larger so it's easier to use.
@@ -25,7 +22,6 @@ There are two types of programs for Jewelbots. Solo Coding uses the one input (t
 7. Every time you create a new file in he Arduino IDE it will have a "setup" and "loop" function already in it. This is because most microcontrollers (especially Arduino brand) use programs with "setup" and "loop" functions. The "setup" function runs each time the the device is powered on, then the "loop" function runs continuously while the device is on. Jewelbots come wtih libraries that allow us to write functions specifically for the Jewelbots inputs (magic button and Bluetooth) and outputs (leds, buzzer, and Bluetooth). The "setup" and "loop" functions will be left blank, but we need to keep them in our code to prevent compile errors.
 
 ## Instructions to solo code your Jewelbot
----
 The first program we are going to write is a Timer that you set by pressing the magic button on the Jewelbot. After we code, compile and upload our Timer program to the Jewelbot, you will be able to press the magic button X number of times to set the timer for X number of minutes.
 
 8. First we declare our variables. Type the following code at the top of the project file.
@@ -171,14 +167,13 @@ void button_press_long(void) {
 
 19. Unplug your Jewelbot and test out your new Timer! Click the magic button one time to set the timer for 1 minute. Press the magic button for two full seconds to start the timer. You will see all four leds flash blue (or whatever color you changed it to) one time for every minute set on the timer. The leds will flash red (or whatever color you changed it to) once every 60 seconds. When the timer ends, you will feel a buzz and see an led animation.
 
-20. Congratulations
+20. Congratulations! You just programmed an embedded system, that's something to be proud of.
 
 
 ### How to pair
-Jewelbots can actually be used right out of the box without ever programming them at all. You might need to charge it up first, but you don't need to program it to use it! Many Jewelbots can be assigned to the same friendship group color, however, Jewelbots can only be paired two at a time. In order to pair, first make sure both Jewelbots are unplugged, turned on, and within 60 centimeters of each other. Next, hold down the button on both Jewelbots for 2 full seconds \(counting 1 Mississippi, 2 Mississippi.\) One Jewelbot will light up all white, the other will cycle through colors one at a time. You pick the friendship group color by pressing the button on the cycling Jewelbot.
+Make sure both Jewelbots are unplugged, turned on, and within 60 centimeters of each other. Next, hold down the button on both Jewelbots for 2 full seconds \(counting 1 Mississippi, 2 Mississippi.\) One Jewelbot will light up all white, the other will cycle through colors one at a time. You pick the friendship group color by pressing the button on the cycling Jewelbot.
 
 ## Homework
----
 Did you love working with code? If you want to learn more on your own, we have suggestions for you.
 
 * Come to one of our other Coding & Cupcakes events [Eventbrite](https://www.eventbrite.com/o/coding-amp-cupcakes-kansas-city-16053804463).
