@@ -2,125 +2,25 @@
 ## Overview
 Hello and welcome to Coding & Cupcakes: Jewelbots! Today you will code a Jewelbots programmable friendship bracelet to blink and buzz according to your instructions. You will use the C language to program a bluetooth enabled microcontroller.
 
-## Prep Work
+## Getting Ready to Code!
 While we wait for everyone to arrive, we have some fun activities for you to work on. Don't worry, we'll do the project part as a group!
 
-* Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
-* You'll need to download the Arduino IDE \(it's free\) onto a Windows, Apple, or Linux computer \(Chromebooks don't work with Jewelbots at this time.\) [Install the Arduino IDE (stands for Integrated Development Environment.)](https://www.arduino.cc/en/Main/Software).
-* After you've got the Arduino IDE started up, you'll need to add the Jewelbots boards by copying and pasting the following block of code into the Arduino's "Additional Boards Manager URLS" text box located in the Preferences. Get to Preferences by looking under the File menu in the IDE.
+1. Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
+2. You'll need to download the Arduino IDE \(it's free\) onto a Windows, Apple, or Linux computer \(Chromebooks don't work with Jewelbots at this time.\) [Install the Arduino IDE (stands for Integrated Development Environment.)](https://www.arduino.cc/en/Main/Software).
+3. After you've got the Arduino IDE started up, you'll need to add the Jewelbots boards by copying and pasting the following block of code into the Arduino's "Additional Boards Manager URLS" text box located in the Preferences. Get to Preferences by looking under the File menu in the IDE.
 
 `https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json,https://jewelbots.github.io/arduino-friendship/package_jewelbots_friendship_index.json`
 
-* In the Arduino IDE, select TOOLS>BOARD>BOARD MANAGER and search for Jewelbots. Three libraries should show up in the boards manager. Click anywhere in the box to reveal the install button. Make sure all three libraries are installed. Detailed instructions on how to do this can be found on the [Jewelbots website](https://jewelbots.com/pages/support) if you click on "Code Setup" then click on "Add Boards".
+4. In the Arduino IDE, select TOOLS>BOARD>BOARD MANAGER and search for Jewelbots. Three libraries should show up in the boards manager. Click anywhere in the box to reveal the install button. Make sure all three libraries are installed. Detailed instructions on how to do this can be found on the [Jewelbots website](https://jewelbots.com/pages/support) if you click on "Code Setup" then click on "Add Boards".
 
-* When you open Arduino IDE it will automatically create a new file for you named after the date. Select File > Save As in your Arduino IDE and name your file
-* Every time you create a new file in he Arduino IDE it will have a "setup" and "loop" function already in it. This is because "setup" and "loop" are the two most commonly used functions in Arduino type microcontrollers. The "setup" function runs each time the the device is powered on, then the "loop" function runs continuously while the device is on. Jewelbots come wtih libraries that allow us to write functions specifically for the Jewelbots inputs (magic button and Bluetooth) and outputs (leds, buzzer, and Bluetooth). The "setup" and "loop" functions will be left blank, but we need to keep them in our code to prevent compile errors.
+5. Every time you create a new file in the Arduino IDE it will have a "setup" and "loop" function already in it. The Arduino IDE needs them to compile properly, but we will be leaving them blank for today.
 
-## Instructions to solo code your Jewelbot
-There are two types of programs for Jewelbots. Solo Coding uses the one input (the magic button) and two outputs (the led lights and the buzzer). Friendship Coding uses two inputs (the magic button and Bluetooth) and three outputs (the led lights, the buzzer, and Bluetooth).
+## Solo coding your Jewelbot
+There are two types of programs for Jewelbots, solo coding and friendship coding. Solo Coding uses one input (the magic button) and two outputs (led lights and buzzer).
 
 The first program we are going to write is a Timer that you set by pressing the magic button on the Jewelbot. After we code, compile and upload our Timer program to the Jewelbot, you will be able to press the magic button X number of times to set the timer for X number of minutes.
 
-8. First we declare our variables. Type the following code at the top of the project file.
-```
-Buzzer buzz;
-LED led;
-Timer timer;
-int x = 0;
-
-void setup() {
-}
-
-void loop() {
-}
-```
-Buzzer and LED are variables that represent the outputs on your Jewelbot. Timer is a variable that we will use to count the passing microseconds. The final variable is called "x". We define x as an integer by giving it the prefix "int". We set x to have the value of 0 by typing `x = 0`. In programming, the symbol = does not mean equals, it means "has the value of".
-
-9. Next we write our first function! It will have the name button_press. It will have the return type of void which we indicate by giving it the prefix void. This function will also take no arguments which we will indicate by putting the word void inside parenthesis before the opening braces of the function body.
-```
-void button_press(void){
-
-}
-```
-10. Inside the braces of the function body, add this line of code. `x = x+1;` Remembering that the = sign means "has the value of" in programming, read the line of code out loud. Can you guess what it is doing? Based on the name of this function, can you describe what is going to happen every time the button is pressed? Your code should now look like this.
-```
-Buzzer buzz;
-LED led;
-Timer timer;
-int x = 0;
-
-void setup() {
-}
-
-void loop() {
-}
-
-void button_press(void){
-  x = x+1;
-}
-```
-
-11. Next we will write another function. This one has the name button_press_long. It also takes (void) arguments and has a return type of void. See if you can guess how to type that. Don't be shy about trying something. We will provide the correct code in the next step.
-
-12. Inside the braces of the function body we need to add some code that tells the Jewelbot what to do when the button is pressed for a long press. The short button presses set the timer, and the long button press starts the timer. Several steps need to happen inside the button_press_long function. The first thing we add to our button_press_long are some variables to use as counters.
-```
-void button_press_long(void) {
-  int i = 0;
-  int j = 0;
-```
-13. The next thing we are adding to our button_press_long function is a loop telling the leds to flash x number of times. Add the following to your button_press_long function.
-```
-for(int i = 1; i <= x; i++){
-    led.flash_all(BLUE,1000);
-    timer.pause(500);
-}
-```
-This is a "for loop". A "for loop" is a conditional that repeats some code according to the conditions you give it. It is super useful for writing code that you want to repeat many times. The syntax of a "for loop" is that it starts with the word "for". Next the conditions are insude parenthesis. The conditions always go in this order (start, stop, step). In our code, the conditions are `(int i = 1; i <= x; i++)`. This statement tells the Jewelbot to repeat the code inside the "for loop" on the following conditions: _start_ with an integer type of variable called i that has the value of 1, _stop_ when i no longer has a value of equal to or less than x, _step_ each time through the loop by adding 1 to i for every repeat. Don't understand it all yet? Not to worry, this is the sort of thing that's easiest to learn by doing. So let's move on! Your code should now look like this.
-```
-Buzzer buzz;
-LED led;
-Timer timer;
-int x = 0;
-
-void setup() {
-}
-
-void loop() {
-}
-
-void button_press(void){
-  x = x+1;
-}
-
-void button_press_long(void) {
-  int i = 0;
-  int j = 0;
-
-  for(int i = 1; i <= x; i++){
-    led.flash_all(BLUE,1000);
-    timer.pause(500);
-  }
-}
-```
-Now our button_press_long function has a "for loop" that will flash all the leds blue x number of times, with a half second pause between flashes. If you want to change from BLUE to another color, your choices of preset colors are: RED, GREEN, BLUE, YELLOW, MAGENTA, CYAN, or WHITE.
-
-14. The last thing we need to code our button_press_long function to do is to reset x to 0 and buzz to let us know the time is up. The code for that is
-```x = 0;
-buzz.short_buzz();
-```
-
-15. One final thing is that we're going to add a function that tells our Jewelbot to flash all the leds red once per minute. A minute is 60,000 miliseconds but the pause method can't handle numbers that big so we're going to do increments of 10000 times 6 and we'll have the leds flash red every 60 seconds like this. If you want to change from RED to another color, your choices of preset colors are: RED, GREEN, BLUE, YELLOW, MAGENTA, CYAN, or WHITE.
-```
-for(int j = 1; j <= x*6; j++){
-    timer.pause(10000);
-    if (j % 6 == 0) {
-      led.flash_all(RED, 1000);
-}
-```
-
-16. One final thing. Let's add an led animation and tell it to play when the timer goes off. This will require two lines of code. Add this code `Animation animation;` at the top of your file with the other variable declarations. Add this code `animation.rainbows();` on the next line after the buzz command.
-
-Now your code is ready to test out. It should look like this...
+6. Make sure you are starting with a blank file in your Arduino IDE, then Copy and paste the following code into the text window.
 ```
 Animation animation;
 Buzzer buzz;
@@ -158,16 +58,71 @@ void button_press_long(void) {
   animation.rainbows();
 }
 ```
-17. Make sure to save your work by choosing File > Save in the Arduino IDE. Plug in your Jewelbot and select TOOLS > BOARDS > SOLO CODING MODE in the Arduino IDE. Make sure the USB port is selected in the IDE as the Port under the Tools menu. Click on the checkmark button in the Arduino IDE, this will verify that the code compiles correctly. If you get any errors, just ask a mentor for help!
+7. Choose File > Save As and name your file jewelbots_timer. Save it to your computer's desktop.
 
-18. Put your Jewelbot into upload mode by plugging it in to the computer and holding down on the magic button for three seconds. You will see all four leds breathe blue. Then click the the arrow button in the Arduino IDE to upload your code. You will get an orange success message in the IDE when upload is complete. If you're on a Linux computer and your code repeatedly won't upload, you may need to give your computer permission to write out to the USB ports by typing `sudo adduser $USER dialout` into the terminal.
+8. Plug in your Jewelbot and select TOOLS > BOARDS > SOLO CODING MODE in the Arduino IDE. Make sure USB is selected as the Port under the Tools menu.
 
-19. Unplug your Jewelbot and test out your new Timer! Click the magic button one time to set the timer for 1 minute. Press the magic button for two full seconds to start the timer. You will see all four leds flash blue (or whatever color you changed it to) one time for every minute set on the timer. The leds will flash red (or whatever color you changed it to) once every 60 seconds. When the timer ends, you will feel a buzz and see an led animation.
+## Uploading
+9. Click on the checkmark button in the Arduino IDE, this will verify that the code compiles correctly. If you get any errors, ask a mentor for help!
 
-20. Congratulations! You programmed an embedded system, that's something to be proud of.
+10. Put your Jewelbot into upload mode by plugging it in to the computer and holding down on the magic button for three seconds. You will see all four leds breathe blue.
 
-## Bonus Mission
-To code a friendship program for your Jewelbot, create a new file in the Arduino IDE and set the Board (found under Tools) to Friendship Coding Mode. Then go to this repo and copy the code from one of the friendship program files [Coding & Cupcakes: Jewelbots](https://github.com/KansasCityWomeninTechnology/jewelbots).
+11. Click the the arrow button in the Arduino IDE to upload your code. You will get an orange success message when upload is complete. If you're on a Linux computer and your code repeatedly won't upload, you may need to give your computer permission to use the USB ports by typing `sudo adduser $USER dialout` into the terminal.
+
+12. Unplug your Jewelbot and test your new Timer! Click the magic button ONCE to set the timer for 1 minute. Press the magic button for two full seconds (counting 1 Mississippi, 2 Mississippi) to start the timer. You will see all four leds flash blue one time for every minute set on the timer. The leds will flash red once every 60 seconds. When the timer ends, you will feel a buzz and see an led animation.
+
+13. Congratulations! You programmed an embedded system, that's something to be proud of.
+
+### What's a variable?
+Variables are like suitcases that store data for us. We declare our variables at the beginning of our Jewelbots program like this.
+```
+Animation animation;
+Buzzer buzz;
+LED led;
+Timer timer;
+int x = 0;
+```
+The first four variables: Animation, Buzzer, LED, and Timer hold data from the Jewelbots library. The final variable we named "x". We declared x as an integer by giving it the prefix "int". We set x to have the value of 0 by typing `x = 0`. In programming, the symbol = does not mean equals, it means "has the value of".
+
+### What's a function?
+A function is a piece of code that takes inputs, performs operations on those inputs, then returns something. We wrote a function with the name button_press. It has the return type of void which we indicate by giving it the prefix void. This function also takes one argument, void. We indicate this by putting the word void inside the function's parenthesis.
+```
+void button_press(void){
+
+}
+```
+* Inside the curly braces of the button_press() function body, look at this line of code. `x = x+1;` Remembering that the = sign means "has the value of" in programming, read the line of code out loud. Can you guess what it is doing? Based on the name of this function, can you describe what is going to happen every time the button is pressed? Your code should now look like this.
+
+### What is a for loop?
+A "for loop" is a conditional that repeats some code according to the conditions you give it. It is super useful for writing code that you want to repeat many times. The syntax of a "for loop" is that it starts with the word "for". Next the conditions are inside parenthesis. The conditions always go in this order (start, stop, step).
+
+* Look inside the button_press_long() function at the following for loop.
+```
+for(int i = 1; i <= x; i++){
+    led.flash_all(BLUE,1000);
+    timer.pause(500);
+}
+```
+the conditions are `(int i = 1; i <= x; i++)`. This statement tells the Jewelbot to repeat the code inside the "for loop" on the following conditions: _start_ with an integer type of variable called i that has the value of 1, _stop_ when i no longer has a value of equal to or less than x, _step_ each time through the loop by adding 1 to i for every repeat. Don't understand it all yet? Not to worry, this is the sort of thing that's easiest to learn by doing. So let's get to something fun... colors!
+
+### Colors
+The light emitting diodes (leds) on your Jewelbot can produce several different colors. Look through the code for the command `led.flash_all(BLUE,1000);` You can change `BLUE` to any of these: GREEN, BLUE, YELLOW, MAGENTA, CYAN, or WHITE. After you've changed the color, repeat the steps from the Uploading section and see how your Jewelbot displays the colors you told it to!
+
+
+### Time
+In the button_press_long() function we have a for loop that tells our Jewelbot to flash all the leds red once per minute. A minute is 60,000 miliseconds but the pause method can't handle numbers that big so we split it up into pauses of 10000 microseconds that repeat 6 times. Experiment with changing the microseconds in your program to make the leds flash every second or every 10 seconds or what ever you want!
+```
+for(int j = 1; j <= x*6; j++){
+    timer.pause(10000);
+    if (j % 6 == 0) {
+      led.flash_all(RED, 1000);
+}
+```
+### Animations
+The most exciting part of the Jewelbots library is that it includes predefined sequences of led flashes called animations. We call `animation.rainbows();` one time in our program, when the timer is up. Can you find other places to call `animation.rainbows();` in your program?
+
+## Friendship Coding your Jewelblot
+Remember how Jewelbots have two modes? Friendship Coding uses two inputs (the magic button and Bluetooth) and three outputs (led lights, buzzer, and Bluetooth). To code a friendship program for your Jewelbot, create a new file in the Arduino IDE and set the Board (found under Tools) to Friendship Coding Mode. Then go to this repo and copy the code from one of the friendship program files [Coding & Cupcakes: Jewelbots](https://github.com/KansasCityWomeninTechnology/jewelbots).
 
 ### How to pair
 Make sure both Jewelbots are unplugged, turned on, and within 60 centimeters of each other. Hold down the button on both Jewelbots for 2 full seconds \(counting 1 Mississippi, 2 Mississippi.\) One Jewelbot will light up all white, the other will cycle through colors one at a time. You pick the friendship group color by pressing the button on the cycling Jewelbot.
