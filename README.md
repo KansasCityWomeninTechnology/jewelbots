@@ -88,22 +88,22 @@ The first four variables: Animation, Buzzer, LED, and Timer hold data from the J
 A function is a piece of code that is callable. A function can take inputs known as parameters. A function performs a task. A function can return something. We wrote a function named button_press(). It has the return type of void which we indicate by giving it the prefix void. This function also takes one parameter, void. We indicate this by putting the word void inside the function's parenthesis.
 ```
 void button_press(void){
-
+  x = x+1;
 }
 ```
 * Inside the curly braces of the button_press() function body, look at this line of code. `x = x+1;` Remembering that the = sign means "has the value of" in programming, read the line of code out loud. Can you guess what it is doing? Based on the name of this function, can you describe what is going to happen every time the button is pressed?
 
-### What is a for loop?
-A "for loop" is a conditional that repeats some code according to the conditions you give it. It is super useful for writing code that you want to repeat many times. The syntax of a "for loop" is that it starts with the word "for". Next the conditions are inside parenthesis. The conditions always go in this order (start, stop, step).
+### What's a for loop?
+A "for loop" is a conditional that repeats some code according to the conditions you give it. For loops are super useful for writing code that you want to repeat more than once. A "for loop" starts with the word "for". The conditions are inside parentheses. The conditions go in this order (__start, stop, step__).
 
-* Look inside the button_press_long() function at the following for loop.
+* Look inside the button_press_long() function at this for loop.
 ```
 for(int i = 1; i <= x; i++){
     led.flash_all(BLUE,1000);
     timer.pause(500);
 }
 ```
-the conditions are `(int i = 1; i <= x; i++)`. This statement tells the Jewelbot to repeat the code inside the "for loop" on the following conditions: _start_ with an integer type of variable called i that has the value of 1, _stop_ when i no longer has a value of equal to or less than x, _step_ each time through the loop by adding 1 to i for every repeat. Don't understand it all yet? Not to worry, this is the sort of thing that's easiest to learn by doing. So let's get to something fun... colors!
+The conditions are `(int i = 1; i <= x; i++)`. This means: _start_ with an integer type variable called i that has the value of 1, _stop_ when i no longer has a value equal to or less than x, _step_ each time through the loop by adding 1 to i for every repeat. Don't understand it all yet? Not to worry, this is the sort of thing that's easiest to learn by doing. So let's get to something fun... colors!
 
 ### Colors
 The light emitting diodes (leds) on your Jewelbot can produce several different colors. Look through the code for the command `led.flash_all(BLUE,1000);` You can change `BLUE` to any of these: GREEN, BLUE, YELLOW, MAGENTA, CYAN, or WHITE. After you've changed the color, repeat the steps from the Uploading section and see how your Jewelbot displays the colors you told it to!
