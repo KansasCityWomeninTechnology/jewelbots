@@ -5,23 +5,20 @@ Hello and welcome to Coding & Cupcakes: Jewelbots! Today you will code a Jewelbo
 ## Prep Work
 While we wait for everyone to arrive, we have some fun activities for you to work on. Don't worry, we'll do the project part as a group!
 
-1. Parents: Please take our anonymous [survey](https://docs.google.com/forms/d/e/1FAIpQLSdKlS1CXl3lq1FuCNgFuoBucqZhq4f7Yr2V67PMp0IiuhfuBg/viewform).
-2. Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
-3. You'll need to download the Arduino IDE \(it's free\) onto a Windows, Apple, or Linux computer \(Chromebooks don't work with Jewelbots at this time.\) [Install the Arduino IDE (stands for Integrated Development Environment.)](https://www.arduino.cc/en/Main/Software).
-4. After you've got the Arduino IDE started up, you'll need to add the Jewelbots boards by copying and pasting the following block of code into the Arduino's "Additional Boards Manager URLS" text box located in the Preferences. Get to Preferences by looking under the File menu in the IDE.
+* Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
+* You'll need to download the Arduino IDE \(it's free\) onto a Windows, Apple, or Linux computer \(Chromebooks don't work with Jewelbots at this time.\) [Install the Arduino IDE (stands for Integrated Development Environment.)](https://www.arduino.cc/en/Main/Software).
+* After you've got the Arduino IDE started up, you'll need to add the Jewelbots boards by copying and pasting the following block of code into the Arduino's "Additional Boards Manager URLS" text box located in the Preferences. Get to Preferences by looking under the File menu in the IDE.
 
 `https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json,https://jewelbots.github.io/arduino-friendship/package_jewelbots_friendship_index.json`
 
-Detailed instructions on how to do this can be found on the [Jewelbots website](https://jewelbots.com/pages/support) if you click on "Code Setup" then click on "Add Boards".
+* In the Arduino IDE, select TOOLS>BOARD>BOARD MANAGER and search for Jewelbots. Three libraries should show up in the boards manager. Click anywhere in the box to reveal the install button. Make sure all three libraries are installed. Detailed instructions on how to do this can be found on the [Jewelbots website](https://jewelbots.com/pages/support) if you click on "Code Setup" then click on "Add Boards".
 
-## Project Setup
-There are two types of programs for Jewelbots. Solo Coding uses the one input (the magic button) and two outputs (the led lights and the buzzer). Friendship Coding uses two inputs (the magic button and Bluetooth) and three outputs (the led lights, the buzzer, and Bluetooth). We will write one solo coding program and one friendship coding program today.
-
-5. Start by selecting File > New in your Arduino IDE. This will open a new window, feel free to make the window larger so it's easier to use.
-6. Next choose File > Save As in your Arduino IDE and choose a name and location for your program file.
-7. Every time you create a new file in he Arduino IDE it will have a "setup" and "loop" function already in it. This is because most microcontrollers (especially Arduino brand) use programs with "setup" and "loop" functions. The "setup" function runs each time the the device is powered on, then the "loop" function runs continuously while the device is on. Jewelbots come wtih libraries that allow us to write functions specifically for the Jewelbots inputs (magic button and Bluetooth) and outputs (leds, buzzer, and Bluetooth). The "setup" and "loop" functions will be left blank, but we need to keep them in our code to prevent compile errors.
+* When you open Arduino IDE it will automatically create a new file for you named after the date. Select File > Save As in your Arduino IDE and name your file
+* Every time you create a new file in he Arduino IDE it will have a "setup" and "loop" function already in it. This is because "setup" and "loop" are the two most commonly used functions in Arduino type microcontrollers. The "setup" function runs each time the the device is powered on, then the "loop" function runs continuously while the device is on. Jewelbots come wtih libraries that allow us to write functions specifically for the Jewelbots inputs (magic button and Bluetooth) and outputs (leds, buzzer, and Bluetooth). The "setup" and "loop" functions will be left blank, but we need to keep them in our code to prevent compile errors.
 
 ## Instructions to solo code your Jewelbot
+There are two types of programs for Jewelbots. Solo Coding uses the one input (the magic button) and two outputs (the led lights and the buzzer). Friendship Coding uses two inputs (the magic button and Bluetooth) and three outputs (the led lights, the buzzer, and Bluetooth).
+
 The first program we are going to write is a Timer that you set by pressing the magic button on the Jewelbot. After we code, compile and upload our Timer program to the Jewelbot, you will be able to press the magic button X number of times to set the timer for X number of minutes.
 
 8. First we declare our variables. Type the following code at the top of the project file.
