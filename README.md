@@ -85,13 +85,13 @@ int x = 0;
 The first four variables: Animation, Buzzer, LED, and Timer hold data from the Jewelbots library. The final variable we named "x". We declared x as an integer by giving it the prefix "int". We set x to have the value of 0 by typing `x = 0`. In programming, the symbol = does not mean equals, it means "has the value of".
 
 ### What's a function?
-A function is a piece of code that takes inputs, performs operations on those inputs, then returns something. We wrote a function with the name button_press. It has the return type of void which we indicate by giving it the prefix void. This function also takes one argument, void. We indicate this by putting the word void inside the function's parenthesis.
+A function is a piece of code that is callable. A function can take inputs known as parameters. A function performs a task. A function can return something. We wrote a function named button_press(). It has the return type of void which we indicate by giving it the prefix void. This function also takes one parameter, void. We indicate this by putting the word void inside the function's parenthesis.
 ```
 void button_press(void){
 
 }
 ```
-* Inside the curly braces of the button_press() function body, look at this line of code. `x = x+1;` Remembering that the = sign means "has the value of" in programming, read the line of code out loud. Can you guess what it is doing? Based on the name of this function, can you describe what is going to happen every time the button is pressed? Your code should now look like this.
+* Inside the curly braces of the button_press() function body, look at this line of code. `x = x+1;` Remembering that the = sign means "has the value of" in programming, read the line of code out loud. Can you guess what it is doing? Based on the name of this function, can you describe what is going to happen every time the button is pressed?
 
 ### What is a for loop?
 A "for loop" is a conditional that repeats some code according to the conditions you give it. It is super useful for writing code that you want to repeat many times. The syntax of a "for loop" is that it starts with the word "for". Next the conditions are inside parenthesis. The conditions always go in this order (start, stop, step).
