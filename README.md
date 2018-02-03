@@ -14,7 +14,7 @@ Hello and welcome to Coding & Cupcakes: Jewelbots! Today you will code a Jewelbo
 3. In the Arduino IDE, go to File -> Preferences. Copy and paste the following code into **Additional Boards Manager URLS** and then click OK: `https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json,https://jewelbots.github.io/arduino-friendship/package_jewelbots_friendship_index.json`
 
 4. In the Arduino IDE, select **Tools** -> **Board** -> **Boards Manager** and search for Jewelbots. Three libraries should appear. For each library, click anywhere in the box to reveal the install button and click **Install**. (See screenshot below.)
-<img src="img/install_libraries.png" alt="Coding and Cupcakes Logo">
+<img src="img/install_libraries.png" alt="screenshot of Jewelbots libraries">
 
 ## Solo coding your Jewelbot
 There are two types of programs for Jewelbots, solo coding and friendship coding. Solo Coding uses one input (the magic button) and two outputs (led lights and buzzer).
