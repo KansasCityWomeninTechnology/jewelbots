@@ -3,17 +3,18 @@
 Hello and welcome to Coding & Cupcakes: Jewelbots! Today you will code a Jewelbots programmable friendship bracelet to blink and buzz according to your instructions. You will use the C language to program a bluetooth enabled microcontroller.
 
 ## Prep Work
-While we wait for everyone to arrive, we have some fun activities for you to work on. Don't worry, we'll do the project part as a group!
 
 1. Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
-2. You'll need to download the Arduino IDE \(it's free\) onto a Windows, Apple, or Linux computer \(Chromebooks don't work with Jewelbots at this time.\) [Install the Arduino IDE (stands for Integrated Development Environment.)](https://www.arduino.cc/en/Main/Software).
-3. After you've got the Arduino IDE started up, you'll need to add the Jewelbots boards by copying and pasting the following block of code into the Arduino's "Additional Boards Manager URLS" text box located in the Preferences. Get to Preferences by looking under the File menu in the IDE.
+2. Download the Arduino IDE from [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software) onto a Windows, Apple, or Linux computer \(Chromebooks don't work with Jewelbots at this time.\).
+    1.  Linux:
+        1. The download will give you a `.tar` file. Move it from your Downloads folder into your home folder.
+        2. Open Archive Manager. In Archive Manager, go to File -> Open and open the `.tar` file, then click **Extract** to unpack it. This should create an arduino folder.
+        3. Open a terminal, go into the newly-created arduino folder, and type `./install.sh`.
+        4. Once the process is finished, find and open the Arduino application using your computer's search feature.
+3. In the Arduino IDE, go to File -> Preferences. Copy and paste the following code into **Additional Boards Manager URLS** and then click OK: `https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json,https://jewelbots.github.io/arduino-friendship/package_jewelbots_friendship_index.json`
 
-`https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json,https://jewelbots.github.io/arduino-friendship/package_jewelbots_friendship_index.json`
-
-4. In the Arduino IDE, select TOOLS>BOARD>BOARD MANAGER and search for Jewelbots. Three libraries should show up in the boards manager. Click anywhere in the box to reveal the install button. Make sure all three libraries are installed. Detailed instructions on how to do this can be found on the [Jewelbots website](https://jewelbots.com/pages/support) if you click on "Code Setup" then click on "Add Boards".
-
-5. Every time you create a new file in the Arduino IDE it will have a "setup" and "loop" function already in it. The Arduino IDE needs them to compile properly, but we will be leaving them blank for today.
+4. In the Arduino IDE, select **Tools** -> **Board** -> **Boards Manager** and search for Jewelbots. Three libraries should appear. For each library, click anywhere in the box to reveal the install button and click **Install**. (See screenshot below.)
+<img src="img/install_libraries.png" alt="Coding and Cupcakes Logo">
 
 ## Solo coding your Jewelbot
 There are two types of programs for Jewelbots, solo coding and friendship coding. Solo Coding uses one input (the magic button) and two outputs (led lights and buzzer).
@@ -21,6 +22,8 @@ There are two types of programs for Jewelbots, solo coding and friendship coding
 The first program we are going to write is a Timer that you set by pressing the magic button on the Jewelbot. After we code, compile and upload our Timer program to the Jewelbot, you will be able to press the magic button X number of times to set the timer for X number of minutes.
 
 6. Make sure you are starting with a blank file in your Arduino IDE, then Copy and paste the following code into the text window.
+
+
 ```
 Animation animation;
 Buzzer buzz;
