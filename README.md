@@ -67,8 +67,7 @@ void button_press_long(void) {
 ```
 7. Choose **File** -> **Save As** and name your file **jewelbots_timer**. Save it to your computer's desktop.
 
-9. Click on the checkmark button in the Arduino IDE; this will verify that the code compiles correctly. If you get any errors, ask a mentor for help!
-<img src="img/arduino_checkmark.png">
+9. Click on the checkmark button in the Arduino IDE; this will verify that the code compiles correctly. If you get any errors, ask a mentor for help! <img src="img/arduino_checkmark.png">
 
 ## Uploading
 
