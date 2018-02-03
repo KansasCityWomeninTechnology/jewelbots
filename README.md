@@ -2,7 +2,7 @@
 ## Overview
 Hello and welcome to Coding & Cupcakes: Jewelbots! Today you will code a Jewelbots programmable friendship bracelet to blink and buzz according to your instructions. You will use the C language to program a bluetooth enabled microcontroller.
 
-## Getting Ready to Code!
+## Prep Work
 While we wait for everyone to arrive, we have some fun activities for you to work on. Don't worry, we'll do the project part as a group!
 
 1. Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
