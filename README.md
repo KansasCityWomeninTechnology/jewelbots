@@ -21,12 +21,12 @@
 <img src="img/install_libraries.png" alt="screenshot of Jewelbots libraries">
 
 ## Solo coding your Jewelbot
-There are two types of programs for Jewelbots, solo coding and friendship coding. Solo Coding uses one input (the magic button) and two outputs (led lights and buzzer).
 
-The first program we are going to write is a Timer that you set by pressing the magic button on the Jewelbot. After we code, compile and upload our Timer program to the Jewelbot, you will be able to press the magic button X number of times to set the timer for X number of minutes.
+There are two types of programs for Jewelbots, **Solo Coding** and **Friendship Coding**. We'll start with Solo Coding. It uses one input (the magic button) and two outputs (led lights and buzzer).
 
-6. Make sure you are starting with a blank file in your Arduino IDE, then Copy and paste the following code into the text window.
+When you're making cupcakes, you need to set a timer to know when they're done. Our first program is a timer that you set by pressing the magic button on the Jewelbot. After you upload our timer program to the Jewelbot, you will be able to set the timer for a certain number of minutes by pressing the magic button that many times - for example, you can set the timer for 2 minutes by pressing the magic button 2 times.
 
+6. Make sure you are starting with a blank file in your Arduino IDE, then copy and paste the following code into the text window.
 
 ```
 Animation animation;
@@ -65,12 +65,16 @@ void button_press_long(void) {
   animation.rainbows();
 }
 ```
-7. Choose File > Save As and name your file jewelbots_timer. Save it to your computer's desktop.
+7. Choose **File** -> **Save As** and name your file **jewelbots_timer**. Save it to your computer's desktop.
 
-8. Plug in your Jewelbot and select TOOLS > BOARDS > SOLO CODING MODE in the Arduino IDE. Make sure USB is selected as the Port under the Tools menu.
+9. Click on the checkmark button in the Arduino IDE; this will verify that the code compiles correctly. If you get any errors, ask a mentor for help!
+<img src="img/arduino_checkmark.png">
 
 ## Uploading
-9. Click on the checkmark button in the Arduino IDE, this will verify that the code compiles correctly. If you get any errors, ask a mentor for help!
+
+Right now, the timer code is only on your laptop. We need to move it over to the microprocessor inside your Jewelbots bracelet.
+
+8. Plug in your Jewelbot and select TOOLS > BOARDS > SOLO CODING MODE in the Arduino IDE. Make sure USB is selected as the Port under the Tools menu.
 
 10. Put your Jewelbot into upload mode by plugging it in to the computer and holding down on the magic button for three seconds. You will see all four leds breathe blue.
 
