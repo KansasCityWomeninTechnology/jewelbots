@@ -1,5 +1,5 @@
 
-<img align="right" width="175" height="175" src="img/cupcakes_logo.png" alt="Jewelbots logo">
+<img align="right" width="200" height="200" src="img/cupcakes_logo.png" alt="Jewelbots logo">
 
 # Coding & Cupcakes Worksheet
 
