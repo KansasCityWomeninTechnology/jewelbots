@@ -74,9 +74,9 @@ void button_press_long(void) {
 
 Right now, the timer code is only on your laptop. We need to move it over to the microprocessor inside your Jewelbots bracelet.
 
-8. Plug in your Jewelbot and select TOOLS > BOARDS > SOLO CODING MODE in the Arduino IDE. Make sure USB is selected as the Port under the Tools menu.
+8. Plug in your Jewelbot and select **Tools** -> **Boards** -> **Solo Coding Mode** in the Arduino IDE. Make sure USB is selected as the Port under the Tools menu.
 
-10. Put your Jewelbot into upload mode by plugging it in to the computer and holding down on the magic button for three seconds. You will see all four leds breathe blue.
+10. Put your Jewelbot into upload mode by holding down on the magic button for three seconds. You will see all four leds breathe blue.
 
 11. Click the the arrow button in the Arduino IDE to upload your code. You will get an orange success message when upload is complete. If you're on a Linux computer and your code repeatedly won't upload, you may need to give your computer permission to use the USB ports by typing `sudo adduser $USER dialout` into the terminal.
 
