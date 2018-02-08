@@ -10,15 +10,46 @@
 
 1. Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
 2. Download the Arduino IDE from [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software) onto a Windows, Apple, or Linux computer \(Chromebooks don't work with Jewelbots at this time.\).
-    1.  Linux:
+    * If you're using Linux, here are some pointers if you're unsure how to download:
         1. The download will give you a `.tar` file. Move it from your Downloads folder into your home folder.
         2. Open Archive Manager. In Archive Manager, go to File -> Open and open the `.tar` file, then click **Extract** to unpack it. This should create an arduino folder.
         3. Open a terminal, go into the newly-created arduino folder, and type `./install.sh`.
         4. Once the process is finished, find and open the Arduino application using your computer's search feature.
 3. In the Arduino IDE, go to File -> Preferences. Copy and paste the following code into **Additional Boards Manager URLS** and then click OK: `https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json,https://jewelbots.github.io/arduino-friendship/package_jewelbots_friendship_index.json`
-
 4. In the Arduino IDE, select **Tools** -> **Board** -> **Boards Manager** and search for Jewelbots. Three libraries should appear. For each library, click anywhere in the box to reveal the install button and click **Install**. (See screenshot below.)
 <img src="img/install_libraries.png" alt="screenshot of Jewelbots libraries">
+
+5. Restart the Arduino IDE.
+
+## Getting to know your Jewelbot
+
+<img align="right" width="200" src="img/jewelbot_layout.jpeg">
+Your Jewelbot has fun features that you can interact with:
+
+* A button in the center (the "magic button")
+* 4 LEDS that can light up in different colors, labeled by their positions: SW, NW, NE, SE
+* A buzzer inside
+
+Turning your Jewelbot on and off:
+
+* Turn your Jewelbot on by pressing the magic button once. When the Jewelbot turns on, it buzzes and the LEDs light up.
+* Turn your Jewelbot off by holding down the magic button for 5 seconds ("1 Mississippi, 2 Mississippi, ..."). When the Jewelbot turns off, all the LEDs light up.
+
+Your Jewelbot can also use Bluetooth to detect when another Jewelbot is nearby if they're paired with each other. We'll try this out next.
+
+## Pairing
+
+1. Find another girl to pair with for this part.
+2. Unplug both of your Jewelbots and make sure they're both turned on.
+3. Press the magic button on one Jewelbot for 2 seconds to put it into pairing mode. It should slowly flash all white lights.
+4. Press the magic button on the other Jewelbot for 2 seconds to put it into pairing mode also. The first Jewelbot should now stay all white while the second one cycles through different colors.
+5. Choose a friendship color by pressing the magic button on the second Jewelbot when it's showing that color.
+
+Now you'll know when your friend is nearby because your Jewelbots will light up with your friendship color!
+
+## Programming your Jewelbot
+
+Your Jewelbot has two different coding modes: **Friendship Coding** and **Solo Coding**. You can use Friendship Coding to program your Jewelbot to do different things when your friend is nearby. With **Solo Coding**, you can program your Jewelbot to do things on its own. We'll start with Solo Coding to get some practice with coding the Jewelbot.
 
 ## Solo coding your Jewelbot
 
@@ -68,8 +99,10 @@ void button_press_long(void) {
 7. Choose **File** -> **Save As** and name your file **jewelbots_timer**. Save it to your computer's desktop.
 
 9. Click on the checkmark button in the Arduino IDE; this will verify that the code compiles correctly. If you get any errors, ask a mentor for help!
-<img src="img/arduino_checkmark.png">
 
+<p align="center">
+<img src="img/arduino_checkmark.png">
+</p>
 ## Uploading
 
 Right now, the timer code is only on your laptop. We need to move it over to the microprocessor inside your Jewelbots bracelet.
