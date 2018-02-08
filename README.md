@@ -15,7 +15,7 @@
         2. Open Archive Manager. In Archive Manager, go to File -> Open and open the `.tar` file, then click **Extract** to unpack it. This should create an arduino folder.
         3. Open a terminal, go into the newly-created arduino folder, and type `./install.sh`.
         4. Once the process is finished, find and open the Arduino application using your computer's search feature.
-3. In the Arduino IDE, go to File -> Preferences. Copy and paste the following code into **Additional Boards Manager URLS** and then click OK: `https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json,https://jewelbots.github.io/arduino-friendship/package_jewelbots_friendship_index.json`
+3. In the Arduino IDE, go to Preferences (File -> Preferences on Linux, Arduino -> Preferences on Mac). Copy and paste the following code into **Additional Boards Manager URLS** and then click OK: `https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json,https://jewelbots.github.io/arduino-friendship/package_jewelbots_friendship_index.json`
 4. In the Arduino IDE, select **Tools** -> **Board** -> **Boards Manager** and search for Jewelbots. Three libraries should appear. For each library, click anywhere in the box to reveal the install button and click **Install**. (See screenshot below.)
 <img src="img/install_libraries.png" alt="screenshot of Jewelbots libraries">
 
@@ -30,16 +30,16 @@ Your Jewelbot has fun features that you can interact with:
 * 4 LEDS that can light up in different colors, labeled by their positions: SW, NW, NE, SE
 * A buzzer inside
 
-Turning your Jewelbot on and off:
+How to turn your Jewelbot on and off:
 
 * Turn your Jewelbot on by pressing the magic button once. When the Jewelbot turns on, it buzzes and the LEDs light up.
-* Turn your Jewelbot off by holding down the magic button for 5 seconds ("1 Mississippi, 2 Mississippi, ..."). When the Jewelbot turns off, all the LEDs light up.
+* Turn your Jewelbot off by pressing the magic button for 5 seconds ("1 Mississippi, 2 Mississippi, ..."). When the Jewelbot turns off, all the LEDs light up.
 
 Your Jewelbot can also use Bluetooth to detect when another Jewelbot is nearby if they're paired with each other. We'll try this out next.
 
 ## Pairing
 
-1. Find another girl to pair with for this part.
+1. Find another girl to pair up with for this part.
 2. Unplug both of your Jewelbots and make sure they're both turned on.
 3. Press the magic button on one Jewelbot for 2 seconds to put it into pairing mode. It should slowly flash all white lights.
 4. Press the magic button on the other Jewelbot for 2 seconds to put it into pairing mode also. The first Jewelbot should now stay all white while the second one cycles through different colors.
@@ -55,7 +55,7 @@ Your Jewelbot has two different coding modes: **Friendship Coding** and **Solo C
 
 First we'll write the program on our computer:
 
-2. Erase all the code in the Arduino IDE text window and replace it with the sample code below.
+1. Erase all the code in the Arduino IDE text window and replace it with the sample code below.
 
   ```
   void setup() {
@@ -72,9 +72,9 @@ First we'll write the program on our computer:
     timer.pause(500);
   }
   ```
-3. Choose **File** -> **Save As** and name your file **jewelbots_sample**. Save it to your computer's desktop.
+2. Choose **File** -> **Save As** and name your file **jewelbots_sample**. Save it to your computer's desktop.
 
-4. Click on the checkmark button in the Arduino IDE; this will check the code for syntax errors - for example, a missing semicolon at the end of a line. If you get any errors, ask a mentor for help!
+3. Click on the checkmark button in the Arduino IDE; this will check the code for syntax errors - for example, a missing semicolon at the end of a line. If you get any errors, ask a mentor for help!
 
 <p align="center">
 <img src="img/arduino_checkmark.png">
@@ -103,7 +103,7 @@ You've learned the basic steps of programming the Jewelbot:
 * uploading the code
 * running the code
 
-Now try changing the program to make it do something different:
+Now we'll try changing the program to make it do something different.
 1. Using the [Jewelbots documentation](https://jewelbots.com/pages/support), modify the sample program so that the LED it turns on:
     * is a different color
     * is in a different position
@@ -111,7 +111,7 @@ Now try changing the program to make it do something different:
 2. Once you think your program is correct, click the checkmark button to check the syntax.
 3. Save your program as **jewelbots_yourname**
 4. Follow the steps for uploading and running your code. Did it do what you expected?
-5. Use the documentation for [LED Animations](https://jewelbots.com/pages/support) or the [Buzzer](https://jewelbots.com/pages/support) to modify the program again. Program the Jewelbot to do at least 3 different things inside the curly brackets of the **loop** function.
+5. Use the documentation for [LED Animations](https://jewelbots.com/pages/support) or the [Buzzer](https://jewelbots.com/pages/support) to modify the program again. Program the Jewelbot to do **at least 3 different things** inside the curly brackets of the **loop** function.
 6. Save, upload, and run your new program. If it doesn't work, see if you can figure out why. Once you get it working, show it to us!
 
 ## Counting down to cupcake time  
@@ -158,7 +158,7 @@ Sometimes you just need to know how long it is until cupcake time! Our next prog
   ```
 2. Save the file as **jewelbots_timer**
 3. Click the checkmark button to check the syntax, then upload the program to your Jewelbot.
-4. Unplug your Jewelbot and test your new timer!
+4. Unplug your Jewelbot and test your new timer.
     * Click the magic button ONCE to set the timer for 1 minute.
     * Press the magic button for two full seconds (counting 1 Mississippi, 2 Mississippi) to start the timer. You will see all four leds flash blue once for every minute set on the timer.
     * The LEDs will flash red once every 60 seconds. When the timer ends, you will feel a buzz and see an LED animation.
