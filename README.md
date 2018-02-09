@@ -228,6 +228,4 @@ Did you love working with code? If you want to learn more on your own, we have s
 * Check out the Arduino project hub for ideas about what you can make with your new skills! [Arduino Project Hub](https://create.arduino.cc/projecthub).
 
 ---
-<p align="center">
 Please take a moment to let us know how the workshop went by completing a short [survey](https://docs.google.com/forms/d/e/1FAIpQLSez_eKdTOfZsfv_IrxAFOaW20Hp5o7q05uosXrGMw_2OTepIQ/viewform)!
-<p>
