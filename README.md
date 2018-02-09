@@ -216,7 +216,6 @@ The most exciting part of the Jewelbots library is that it includes predefined s
 ## Friendship Coding your Jewelbot
 Remember how Jewelbots have two modes? Friendship Coding uses two inputs (the magic button and Bluetooth) and three outputs (led lights, buzzer, and Bluetooth). To code a friendship program for your Jewelbot, create a new file in the Arduino IDE and set the Board (found under Tools) to Friendship Coding Mode. Then go to this repo and copy the code from one of the friendship program files [Coding & Cupcakes: Jewelbots](https://github.com/KansasCityWomeninTechnology/jewelbots).
 
-
 ## Homework
 Did you love working with code? If you want to learn more on your own, we have suggestions for you.
 
@@ -227,3 +226,8 @@ Did you love working with code? If you want to learn more on your own, we have s
 * Also, [Jewelbots Learning Resources](https://jewelbots.com/pages/support)
 * Visit Tinkercad Learn and click on "Circuits" [Tinkercad Learn](https://www.tinkercad.com/learn/).
 * Check out the Arduino project hub for ideas about what you can make with your new skills! [Arduino Project Hub](https://create.arduino.cc/projecthub).
+
+---
+<p align="center">
+Please take a moment to let us know how the workshop went by completing a short [survey](https://docs.google.com/forms/d/e/1FAIpQLSez_eKdTOfZsfv_IrxAFOaW20Hp5o7q05uosXrGMw_2OTepIQ/viewform)!
+<p>
