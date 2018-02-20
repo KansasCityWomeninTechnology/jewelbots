@@ -119,43 +119,7 @@ Now we'll try changing the program to make it do something different.
 Sometimes you just need to know how long it is until cupcake time! Our next program is a timer that you set by pressing the magic button on the Jewelbot. After you upload the timer program to the Jewelbot, you will be able to set the timer for a certain number of minutes by pressing the magic button that many times - for example, you can set the timer for 2 minutes by pressing the magic button 2 times.
 
 1. Replace the existing code in the Arduino IDE with the code below:
-  ```
-  Animation animation;
-  Buzzer buzz;
-  LED led;
-  Timer timer;
-  int x = 0;
-
-  void setup() {
-  }
-
-  void loop() {
-  }
-
-  void button_press(void){
-    x = x+1;
-  }
-
-  void button_press_long(void) {
-    int i = 0;
-    int j = 0;
-    for(int i = 1; i <= x; i++){
-      led.flash_all(BLUE,1000);
-      timer.pause(500);
-    }
-
-    for(int j = 1; j <= x*6; j++){
-      timer.pause(10000);
-      if (j % 6 == 0) {
-        led.flash_all(RED, 1000);
-      }
-    }
-
-    x = 0;
-    buzz.short_buzz();
-    animation.rainbows();
-  }
-  ```
+  [Timer Code](https://github.com/KansasCityWomeninTechnology/jewelbots/blob/master/timer002)
 2. Save the file as **jewelbots_timer**
 3. Click the checkmark button to check the syntax, then upload the program to your Jewelbot.
 4. Unplug your Jewelbot and test your new timer.
