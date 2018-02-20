@@ -2,6 +2,7 @@
 <img align="right" width="200" height="200" src="img/cupcakes_logo.png" alt="Jewelbots logo">
 
 # Coding & Cupcakes Worksheet
+Adrienne changed this
 
 ## Overview
 <img align="right" width="200" src="img/jewelbots_logo.png" alt="Jewelbots logo"> Hello and welcome to Coding & Cupcakes: Jewelbots! Today you will code a Jewelbots programmable friendship bracelet to blink and buzz according to your instructions. You will use the C language to program a bluetooth enabled microcontroller.
