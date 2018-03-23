@@ -6,21 +6,6 @@
 ## Overview
 <img align="right" width="200" src="img/jewelbots_logo.png" alt="Jewelbots logo"> Hello and welcome to Coding & Cupcakes: Jewelbots! Today you will code a Jewelbots programmable friendship bracelet to blink and buzz according to your instructions. You will use the C language to program a bluetooth enabled microcontroller.
 
-## Prep Work
-
-1. Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
-2. Download the Arduino IDE from [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software) onto a Windows, Apple, or Linux computer \(Chromebooks don't work with Jewelbots at this time.\).
-    * If you're using Linux, here are some pointers if you're unsure how to download:
-        1. The download will give you a `.tar` file. Move it from your Downloads folder into your home folder.
-        2. Open Archive Manager. In Archive Manager, go to File -> Open and open the `.tar` file, then click **Extract** to unpack it. This should create an arduino folder.
-        3. Open a terminal, go into the newly-created arduino folder, and type `./install.sh`.
-        4. Once the process is finished, find and open the Arduino application using your computer's search feature.
-3. In the Arduino IDE, go to Preferences (File -> Preferences on Linux, Arduino -> Preferences on Mac). Copy and paste the following code into **Additional Boards Manager URLS** and then click OK: `https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json,https://jewelbots.github.io/arduino-friendship/package_jewelbots_friendship_index.json`
-4. In the Arduino IDE, select **Tools** -> **Board** -> **Boards Manager** and search for Jewelbots. Three libraries should appear. For each library, click anywhere in the box to reveal the install button and click **Install**. (See screenshot below.)
-<img src="img/install_libraries.png" alt="screenshot of Jewelbots libraries">
-
-5. Restart the Arduino IDE.
-
 ## Getting to know your Jewelbot
 
 <img align="right" width="200" src="img/jewelbot_layout.jpeg">
@@ -39,13 +24,30 @@ Your Jewelbot can also use Bluetooth to detect when another Jewelbot is nearby i
 
 ## Pairing
 
-1. Find another girl to pair up with for this part.
+At the beginning of today's session, the mentors will demonstrate how to pair two Jewelbots. After the demo, try it yourself:
+
+1. Find another girl to pair up with.
 2. Unplug both of your Jewelbots and make sure they're both turned on.
 3. Press the magic button on one Jewelbot for 2 seconds to put it into pairing mode. It should slowly flash all white lights.
 4. Press the magic button on the other Jewelbot for 2 seconds to put it into pairing mode also. The first Jewelbot should now stay all white while the second one cycles through different colors.
 5. Choose a friendship color by pressing the magic button on the second Jewelbot when it's showing that color.
 
 Now you'll know when your friend is nearby because your Jewelbots will light up with your friendship color!
+
+## Prep Work
+
+1. Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
+2. Download the Arduino IDE from [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software) onto a Windows, Apple, or Linux computer \(Chromebooks don't work with Jewelbots at this time.\).
+    * If you're using Linux, here are some pointers if you're unsure how to download:
+        1. The download will give you a `.tar` file. Move it from your Downloads folder into your home folder.
+        2. Open Archive Manager. In Archive Manager, go to File -> Open and open the `.tar` file, then click **Extract** to unpack it. This should create an arduino folder.
+        3. Open a terminal, go into the newly-created arduino folder, and type `./install.sh`.
+        4. Once the process is finished, find and open the Arduino application using your computer's search feature.
+3. In the Arduino IDE, go to Preferences (File -> Preferences on Linux, Arduino -> Preferences on Mac). Copy and paste the following code into **Additional Boards Manager URLS** and then click OK: `https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json,https://jewelbots.github.io/arduino-friendship/package_jewelbots_friendship_index.json`
+4. In the Arduino IDE, select **Tools** -> **Board** -> **Boards Manager** and search for Jewelbots. Three libraries should appear. For each library, click anywhere in the box to reveal the install button and click **Install**. (See screenshot below.)
+<img src="img/install_libraries.png" alt="screenshot of Jewelbots libraries">
+
+5. Restart the Arduino IDE.
 
 ## Programming your Jewelbot: The Basics
 
