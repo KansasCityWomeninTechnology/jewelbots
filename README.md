@@ -20,7 +20,7 @@ How to turn your Jewelbot on and off:
 * Turn your Jewelbot on by pressing the magic button once. When the Jewelbot turns on, it buzzes and the LEDs light up.
 * Turn your Jewelbot off by pressing the magic button for 5 seconds ("1 Mississippi, 2 Mississippi, ..."). When the Jewelbot turns off, all the LEDs light up.
 
-Your Jewelbot can also use Bluetooth to detect when another Jewelbot is nearby if they're paired with each other. We'll try this out next.
+Your Jewelbot can also use Bluetooth to detect when another Jewelbot is nearby if they're paired with each other.
 
 ## Pairing
 
@@ -32,9 +32,9 @@ At the beginning of today's session, the mentors will demonstrate how to pair tw
 4. Press the magic button on the other Jewelbot for 2 seconds to put it into pairing mode also. The first Jewelbot should now stay all white while the second one cycles through different colors.
 5. Choose a friendship color by pressing the magic button on the second Jewelbot when it's showing that color.
 
-Now you'll know when your friend is nearby because your Jewelbots will light up with your friendship color!
+Now you'll know when your friend is nearby because your Jewelbots will light up with your friendship color! You can program your Jewelbot to do all sorts of things, either on its own or when it detects your paired friends nearby.
 
-## Prep Work
+## Prep Work for Programming Your Jewelbot
 
 1. Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
 2. Download the Arduino IDE from [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software) onto a Windows, Apple, or Linux computer \(Chromebooks don't work with Jewelbots at this time.\).
@@ -173,8 +173,9 @@ To code a friendship program for your Jewelbot:
 1. Create a new file in the Arduino IDE and set the Board (found under Tools) to **Friendship Coding Mode**.
 2. Replace the existing code in the Arduino IDE with the code from **friendship_sample** in the jewelbots repository.
 3. Find any mentions of color in the code and change them to the friendship color you want to use.
-4. Click the checkmark button to check the syntax, then upload the program to your Jewelbot.
-5. Unplug your Jewelbot and test the program. When friends with the color you specified are nearby, your Jewelbot should show a rainbow animation!
+4. Save the modified Arduino file as **my_friendship_program**
+5. Click the checkmark button to check the syntax, then upload the program to your Jewelbot.
+6. Unplug your Jewelbot and test the program. When friends with the color you specified are nearby, your Jewelbot should show a rainbow animation!
 
 ## Homework
 Did you love working with code? If you want to learn more on your own, we have suggestions for you.
