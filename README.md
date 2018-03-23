@@ -167,7 +167,14 @@ for(int j = 1; j <= x*6; j++){
 The most exciting part of the Jewelbots library is that it includes predefined sequences of led flashes called animations. We call `animation.rainbows();` one time in our program, when the timer is up. Can you find other places to call `animation.rainbows();` in your program?
 
 ## Friendship Coding your Jewelbot
-Remember how Jewelbots have two modes? Friendship Coding uses two inputs (the magic button and Bluetooth) and three outputs (led lights, buzzer, and Bluetooth). To code a friendship program for your Jewelbot, create a new file in the Arduino IDE and set the Board (found under Tools) to Friendship Coding Mode. Then go to this repo and copy the code from one of the friendship program files [Coding & Cupcakes: Jewelbots](https://github.com/KansasCityWomeninTechnology/jewelbots).
+Remember how Jewelbots have two modes? In Friendship Coding Mode, you can program your Jewelbot to do specific things when it detects that your friends are nearby.
+
+To code a friendship program for your Jewelbot:
+1. Create a new file in the Arduino IDE and set the Board (found under Tools) to **Friendship Coding Mode**.
+2. Replace the existing code in the Arduino IDE with the code from **friendship_sample** in the jewelbots repository.
+3. Find any mentions of color in the code and change them to the friendship color you want to use.
+4. Click the checkmark button to check the syntax, then upload the program to your Jewelbot.
+5. Unplug your Jewelbot and test the program. When friends with the color you specified are nearby, your Jewelbot should show a rainbow animation!
 
 ## Homework
 Did you love working with code? If you want to learn more on your own, we have suggestions for you.

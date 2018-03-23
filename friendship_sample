@@ -1,0 +1,13 @@
+Animation animation;
+
+void setup() {
+  // put your setup code here, to run once
+}
+
+void loop() {
+
+ //this code means “if see red friends, then do rainbow animations”
+  if (see_red_friends()) {
+    animation.rainbows();
+  }
+}
