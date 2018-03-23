@@ -55,26 +55,14 @@ Your Jewelbot has two different coding modes: **Friendship Coding** and **Solo C
 
 #### Writing the code
 
-First we'll write the program on our computer:
+First we'll write a program on our computer, using some starter code from the Jewelbots GitHub repository.
+* If you're viewing these instructions online, you're already on the repository web page. Scroll up to the top of the page to find the files.
+* If you're reading a printed copy of these instructions, you can find the jewelbots repository at github.com/KansasCityWomeninTechnology/jewelbots
 
-1. Erase all the code in the Arduino IDE text window and replace it with the sample code below.
+Find the **samplecode** file in the jewelbots repository.
 
-  ```
-  void setup() {
-    // put your setup code here, to run once:
-  }
-
-  void loop() {
-    // put your main code here, to run repeatedly:
-    LED led;
-    Timer timer;
-    led.turn_on_single(SW, GREEN);
-    timer.pause(500);
-    led.turn_off_single(SW);
-    timer.pause(500);
-  }
-  ```
-2. Choose **File** -> **Save As** and name your file **jewelbots_sample**. Save it to your computer's desktop.
+1. Erase all the code in the Arduino IDE text window and replace it with the code from the **samplecode** file.
+2. Choose **File** -> **Save As** and name your modified Arduino file **jewelbots_sample**. Save it to your computer's desktop.
 
 3. Click on the checkmark button in the Arduino IDE; this will check the code for syntax errors - for example, a missing semicolon at the end of a line. If you get any errors, ask a mentor for help!
 
