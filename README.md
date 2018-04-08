@@ -6,21 +6,6 @@
 ## Overview
 <img align="right" width="200" src="img/jewelbots_logo.png" alt="Jewelbots logo"> Hello and welcome to Coding & Cupcakes: Jewelbots! Today you will code a Jewelbots programmable friendship bracelet to blink and buzz according to your instructions. You will use the C language to program a bluetooth enabled microcontroller.
 
-## Prep Work
-
-1. Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
-2. Download the Arduino IDE from [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software) onto a Windows, Apple, or Linux computer \(Chromebooks don't work with Jewelbots at this time.\).
-    * If you're using Linux, here are some pointers if you're unsure how to download:
-        1. The download will give you a `.tar` file. Move it from your Downloads folder into your home folder.
-        2. Open Archive Manager. In Archive Manager, go to File -> Open and open the `.tar` file, then click **Extract** to unpack it. This should create an arduino folder.
-        3. Open a terminal, go into the newly-created arduino folder, and type `./install.sh`.
-        4. Once the process is finished, find and open the Arduino application using your computer's search feature.
-3. In the Arduino IDE, go to Preferences (File -> Preferences on Linux, Arduino -> Preferences on Mac). Copy and paste the following code into **Additional Boards Manager URLS** and then click OK: `https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json,https://jewelbots.github.io/arduino-friendship/package_jewelbots_friendship_index.json`
-4. In the Arduino IDE, select **Tools** -> **Board** -> **Boards Manager** and search for Jewelbots. Three libraries should appear. For each library, click anywhere in the box to reveal the install button and click **Install**. (See screenshot below.)
-<img src="img/install_libraries.png" alt="screenshot of Jewelbots libraries">
-
-5. Restart the Arduino IDE.
-
 ## Getting to know your Jewelbot
 
 <img align="right" width="200" src="img/jewelbot_layout.jpeg">
@@ -35,17 +20,34 @@ How to turn your Jewelbot on and off:
 * Turn your Jewelbot on by pressing the magic button once. When the Jewelbot turns on, it buzzes and the LEDs light up.
 * Turn your Jewelbot off by pressing the magic button for 5 seconds ("1 Mississippi, 2 Mississippi, ..."). When the Jewelbot turns off, all the LEDs light up.
 
-Your Jewelbot can also use Bluetooth to detect when another Jewelbot is nearby if they're paired with each other. We'll try this out next.
+Your Jewelbot can also use Bluetooth to detect when another Jewelbot is nearby if they're paired with each other.
 
 ## Pairing
 
-1. Find another girl to pair up with for this part.
+At the beginning of today's session, the mentors will demonstrate how to pair two Jewelbots. After the demo, try it yourself:
+
+1. Find another girl to pair up with.
 2. Unplug both of your Jewelbots and make sure they're both turned on.
 3. Press the magic button on one Jewelbot for 2 seconds to put it into pairing mode. It should slowly flash all white lights.
 4. Press the magic button on the other Jewelbot for 2 seconds to put it into pairing mode also. The first Jewelbot should now stay all white while the second one cycles through different colors.
 5. Choose a friendship color by pressing the magic button on the second Jewelbot when it's showing that color.
 
-Now you'll know when your friend is nearby because your Jewelbots will light up with your friendship color!
+Now you'll know when your friend is nearby because your Jewelbots will light up with your friendship color! You can program your Jewelbot to do all sorts of things, either on its own or when it detects your paired friends nearby.
+
+## Prep Work for Programming Your Jewelbot
+
+1. Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
+2. Download the Arduino IDE from [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software) onto a Windows, Apple, or Linux computer \(Chromebooks don't work with Jewelbots at this time.\).
+    * If you're using Linux, here are some pointers if you're unsure how to download:
+        1. The download will give you a `.tar` file. Move it from your Downloads folder into your home folder.
+        2. Open Archive Manager. In Archive Manager, go to File -> Open and open the `.tar` file, then click **Extract** to unpack it. This should create an arduino folder.
+        3. Open a terminal, go into the newly-created arduino folder, and type `./install.sh`.
+        4. Once the process is finished, find and open the Arduino application using your computer's search feature.
+3. In the Arduino IDE, go to Preferences (File -> Preferences on Linux, Arduino -> Preferences on Mac). Copy and paste the following code into **Additional Boards Manager URLS** and then click OK: `https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json,https://jewelbots.github.io/arduino-friendship/package_jewelbots_friendship_index.json`
+4. In the Arduino IDE, select **Tools** -> **Board** -> **Boards Manager** and search for Jewelbots. Three libraries should appear. For each library, click anywhere in the box to reveal the install button and click **Install**. (See screenshot below.)
+<img src="img/install_libraries.png" alt="screenshot of Jewelbots libraries">
+
+5. Restart the Arduino IDE.
 
 ## Programming your Jewelbot: The Basics
 
@@ -53,26 +55,14 @@ Your Jewelbot has two different coding modes: **Friendship Coding** and **Solo C
 
 #### Writing the code
 
-First we'll write the program on our computer:
+First we'll write a program on our computer, using some starter code from the Jewelbots GitHub repository.
+* If you're viewing these instructions online, you're already on the repository web page. Scroll up to the top of the page to find the files.
+* If you're reading a printed copy of these instructions, you can find the jewelbots repository at github.com/KansasCityWomeninTechnology/jewelbots
 
-1. Erase all the code in the Arduino IDE text window and replace it with the sample code below.
+Find the **samplecode** file in the jewelbots repository.
 
-  ```
-  void setup() {
-    // put your setup code here, to run once:
-  }
-
-  void loop() {
-    // put your main code here, to run repeatedly:
-    LED led;
-    Timer timer;
-    led.turn_on_single(SW, GREEN);
-    timer.pause(500);
-    led.turn_off_single(SW);
-    timer.pause(500);
-  }
-  ```
-2. Choose **File** -> **Save As** and name your file **jewelbots_sample**. Save it to your computer's desktop.
+1. Erase all the code in the Arduino IDE text window and replace it with the code from the **samplecode** file.
+2. Choose **File** -> **Save As** and name your modified Arduino file **jewelbots_sample**. Save it to your computer's desktop.
 
 3. Click on the checkmark button in the Arduino IDE; this will check the code for syntax errors - for example, a missing semicolon at the end of a line. If you get any errors, ask a mentor for help!
 
@@ -118,45 +108,8 @@ Now we'll try changing the program to make it do something different.
 
 Sometimes you just need to know how long it is until cupcake time! Our next program is a timer that you set by pressing the magic button on the Jewelbot. After you upload the timer program to the Jewelbot, you will be able to set the timer for a certain number of minutes by pressing the magic button that many times - for example, you can set the timer for 2 minutes by pressing the magic button 2 times.
 
-1. Replace the existing code in the Arduino IDE with the code below:
-  ```
-  Animation animation;
-  Buzzer buzz;
-  LED led;
-  Timer timer;
-  int x = 0;
-
-  void setup() {
-  }
-
-  void loop() {
-  }
-
-  void button_press(void){
-    x = x+1;
-  }
-
-  void button_press_long(void) {
-    int i = 0;
-    int j = 0;
-    for(int i = 1; i <= x; i++){
-      led.flash_all(BLUE,1000);
-      timer.pause(500);
-    }
-
-    for(int j = 1; j <= x*6; j++){
-      timer.pause(10000);
-      if (j % 6 == 0) {
-        led.flash_all(RED, 1000);
-      }
-    }
-
-    x = 0;
-    buzz.short_buzz();
-    animation.rainbows();
-  }
-  ```
-2. Save the file as **jewelbots_timer**
+1. Replace the existing code in the Arduino IDE with the code from the **timer002** file in the Jewelbots repository.
+2. Save the modified Arduino file as **jewelbots_timer**
 3. Click the checkmark button to check the syntax, then upload the program to your Jewelbot.
 4. Unplug your Jewelbot and test your new timer.
     * Click the magic button ONCE to set the timer for 1 minute.
@@ -214,7 +167,15 @@ for(int j = 1; j <= x*6; j++){
 The most exciting part of the Jewelbots library is that it includes predefined sequences of led flashes called animations. We call `animation.rainbows();` one time in our program, when the timer is up. Can you find other places to call `animation.rainbows();` in your program?
 
 ## Friendship Coding your Jewelbot
-Remember how Jewelbots have two modes? Friendship Coding uses two inputs (the magic button and Bluetooth) and three outputs (led lights, buzzer, and Bluetooth). To code a friendship program for your Jewelbot, create a new file in the Arduino IDE and set the Board (found under Tools) to Friendship Coding Mode. Then go to this repo and copy the code from one of the friendship program files [Coding & Cupcakes: Jewelbots](https://github.com/KansasCityWomeninTechnology/jewelbots).
+Remember how Jewelbots have two modes? In Friendship Coding Mode, you can program your Jewelbot to do specific things when it detects that your friends are nearby.
+
+To code a friendship program for your Jewelbot:
+1. Create a new file in the Arduino IDE and set the Board (found under Tools) to **Friendship Coding Mode**.
+2. Replace the existing code in the Arduino IDE with the code from **friendship_sample** in the jewelbots repository.
+3. Find any mentions of color in the code and change them to the friendship color you want to use.
+4. Save the modified Arduino file as **my_friendship_program**
+5. Click the checkmark button to check the syntax, then upload the program to your Jewelbot.
+6. Unplug your Jewelbot and test the program. When friends with the color you specified are nearby, your Jewelbot should show a rainbow animation!
 
 ## Homework
 Did you love working with code? If you want to learn more on your own, we have suggestions for you.

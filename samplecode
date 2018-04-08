@@ -1,0 +1,13 @@
+void setup() {
+  // put your setup code here, to run once:
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  LED led;
+  Timer timer;
+  led.turn_on_single(SW, GREEN);
+  timer.pause(500);
+  led.turn_off_single(SW);
+  timer.pause(500);
+}
