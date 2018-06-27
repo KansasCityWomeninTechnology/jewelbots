@@ -73,7 +73,7 @@ Right now, the code you wrote is only on your laptop. We need to upload it to th
     * If you're on a Linux computer and your code repeatedly won't upload, you may need to give your computer permission to use the USB ports by typing `sudo adduser $USER dialout` into the terminal.
 6. The Jewelbot should buzz and light up when the uploading process is done.
 
-<img width="200" src="img/arduino_upload.png">
+<img src="img/arduino_upload.png" alt="Arduino upload button">
 
 #### Running the code
 
