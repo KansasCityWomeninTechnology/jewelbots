@@ -9,12 +9,7 @@
 ## Prep Work for Programming Your Jewelbot
 
 1. Open your Jewelbot and plug it in to the USB port on your computer to start charging it up.
-2. Download the Arduino IDE from [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software) onto a Windows, Apple, or Linux computer \(Chromebooks don't work with Jewelbots at this time.\).
-    * If you're using Linux, here are some pointers if you're unsure how to download:
-        1. The download will give you a `.tar` file. Move it from your Downloads folder into your home folder.
-        2. Open Archive Manager. In Archive Manager, go to File -> Open and open the `.tar` file, then click **Extract** to unpack it. This should create an arduino folder.
-        3. Open a terminal, go into the newly-created arduino folder, and type `./install.sh`.
-        4. Once the process is finished, find and open the Arduino application using your computer's search feature.
+2. Download the Arduino IDE from [https://www.arduino.cc/en/Main/Software](https://www.arduino.cc/en/Main/Software) onto a Windows, Mac, or Linux computer. \(Chromebooks don't work with Jewelbots at this time.\)
 3. In the Arduino IDE, go to Preferences (File -> Preferences on Linux, Arduino -> Preferences on Mac). Copy and paste the following code into **Additional Boards Manager URLS** and then click OK: `https://jewelbots.github.io/arduino-library/package_jewelbots_index.json,https://jewelbots.github.io/arduino-firmware/package_jewelbots_firmware_index.json,https://jewelbots.github.io/arduino-friendship/package_jewelbots_friendship_index.json`
 4. In the Arduino IDE, select **Tools** -> **Board** -> **Boards Manager** and search for Jewelbots. Three libraries should appear. For each library, click anywhere in the box to reveal the install button and click **Install**. (See screenshot below.)
 <img src="img/install_libraries.png" alt="screenshot of Jewelbots libraries">
@@ -57,19 +52,11 @@ Your Jewelbot has two different coding modes: **Friendship Coding** and **Solo C
 #### Writing the code
 
 First we'll write a program on our computer, using some starter code from the Jewelbots GitHub repository.
-* If you're viewing these instructions online, you're already on the repository web page. Scroll up to the top of the page to find the files.
-* If you're reading a printed copy of these instructions, you can find the jewelbots repository at github.com/KansasCityWomeninTechnology/jewelbots
 
-Find the **samplecode** file in the jewelbots repository.
+Scroll to the top of the online instructions (at github.com/KansasCityWomeninTechnology/jewelbots) to find the list of files in the repository. Find the file named  **samplecode**.
 
 1. Erase all the code in the Arduino IDE text window and replace it with the code from the **samplecode** file.
 2. Choose **File** -> **Save As** and name your modified Arduino file **jewelbots_sample**. Save it to your computer's desktop.
-
-3. Click on the checkmark button in the Arduino IDE; this will check the code for syntax errors - for example, a missing semicolon at the end of a line. If you get any errors, ask a mentor for help!
-
-<p align="center">
-<img src="img/arduino_checkmark.png">
-</p>
 
 #### Uploading the code
 
@@ -77,11 +64,16 @@ Right now, the code you wrote is only on your laptop. We need to upload it to th
 
 1. Plug your Jewelbot into your computer.
 2. Select **Tools** -> **Board** -> **Solo Coding Mode**
-3. Select **Tools** -> **Port** and make sure it's set to a USB port.
+3. Select **Tools** -> **Port** and make sure it's set to a USB port. USB port labels look different depending on your operating system:
+  * Linux: something like /dev/ttyUSB
+  * Mac: something like /dev/tty.usbserial
+  * Windows: COM
 4. Press the magic button for 2 seconds to put your Jewelbot in to Upload Mode. When you release the button, all 4 LEDs will breathe blue.
 5. Click the upload arrow button in the Arduino IDE to upload your code. You will get an orange success message when upload is complete.
     * If you're on a Linux computer and your code repeatedly won't upload, you may need to give your computer permission to use the USB ports by typing `sudo adduser $USER dialout` into the terminal.
 6. The Jewelbot should buzz and light up when the uploading process is done.
+
+<img width="200" src="img/arduino_upload.png">
 
 #### Running the code
 
