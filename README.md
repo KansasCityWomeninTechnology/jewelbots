@@ -166,7 +166,7 @@ To code a friendship program for your Jewelbot:
 2. Replace the existing code in the Arduino IDE with the code from **friendship_sample** in the jewelbots repository.
 3. Find any mentions of color in the code and change them to the friendship color you want to use.
 4. Save the modified Arduino file as **my_friendship_program**
-5. Click the checkmark button to check the syntax, then upload the program to your Jewelbot.
+5. Upload the program to your Jewelbot.
 6. Unplug your Jewelbot and test the program. When friends with the color you specified are nearby, your Jewelbot should show a rainbow animation!
 
 ## Homework
